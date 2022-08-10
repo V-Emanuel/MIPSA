@@ -114,6 +114,13 @@ namespace MIPS_Assembler
                 case "beq":
                     return tipo_i(instrucao, sep);
                     break;
+                case "bne":
+                    return tipo_i(instrucao, sep);
+                    break;
+                case "xori":
+                    return tipo_i(instrucao, sep);
+                    break;             
+                    
                 //Tipo "MEM"***********************
                 case "lw":
                     return tipo_mem(instrucao, sep);
@@ -165,6 +172,18 @@ namespace MIPS_Assembler
                     FUNCT = "101010";
                     Status = "Conversão efetuada com sucesso";
                     break;
+                case "nor":
+                    FUNCT = "100111";
+                    Status = "Conversão efetuada com sucesso";
+                    break;
+                case "xor":
+                    FUNCT = "100110";
+                    Status = "Conversão efetuada com sucesso";
+                    break;
+                case "div":
+                    FUNCT = "011010";
+                    Status = "Conversão efetuada com sucesso";
+                    break;
                 default:
                     Status = "Instrução não suportada";
                     flag_error = true;
@@ -205,6 +224,14 @@ namespace MIPS_Assembler
                     break;
                 case "beq":
                     cod_maq = "000100" + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
+                    Status = "Conversão efetuada com sucesso";
+                    break;
+                case "bne":
+                    cod_maq = "000101" + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
+                    Status = "Conversão efetuada com sucesso";
+                    break;
+                case "xori":
+                    cod_maq = "001110" + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
                     Status = "Conversão efetuada com sucesso";
                     break;
                 default:
@@ -285,6 +312,9 @@ namespace MIPS_Assembler
                 "AND $X, $Y, $Z" + "\n" +
                 "OR $X, $Y, $Z" + "\n" +
                 "SLT $X, $Y, $Z" + "\n" +
+                "XOR $X, $Y, $Z" + "\n" +
+                "NOR $X, $Y, $Z" + "\n" +
+                "DIV $X, $Y, $Z" + "\n" +
                 "LW $X, i($Y)" + "\n" +
                 "SW $X, i($Y)" + "\n" +
                 "BEQ $X, $Y, i" + "\n" +
@@ -292,6 +322,8 @@ namespace MIPS_Assembler
                 "ANDi $X, $Y, i" + "\n" +
                 "ORi $X, $Y, i" + "\n" +
                 "SLTi $X, $Y, i" + "\n" +
+                "XORi $X, $Y, i" + "\n" +
+                "BNE $X, $Y, i" + "\n" +
                 "J i" + "\n" + "\n" +
                 "\nResistradores: \n\n$0, $1, $2, $3, $4, $5, $6, $7" + 
                 "\nObs: Usar o $ antes do registrador,\nespaço simples e vírgula." +
