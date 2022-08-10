@@ -10,12 +10,16 @@ As seguintes instruções são suportadas:
  * SUB $X, $Y, $Z
  * AND $X, $Y, $Z
  * OR $X, $Y, $Z
+ * NOR $X, $Y, $Z
+ * XOR $X, $Y, $Z
  * SLT $X, $Y, $Z
  * LW $X, i($Y)
  * SW $X, i($Y)
  * BEQ $X, $Y, i
+ * BNE $X, $Y, i
  * ADDi $X, $Y, i
  * ANDi $X, $Y, i
  * ORi $X, $Y, i
+ * XORi $X, $Y, i
  * SLTi $X, $Y, i
  * J i
