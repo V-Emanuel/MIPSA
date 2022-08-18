@@ -98,6 +98,18 @@ namespace MIPS_Assembler
                 case "slt":
                     return tipo_r(instrucao, sep);
                     break;
+                case "xor":
+                    return tipo_r(instrucao, sep);
+                    break;
+                case "xor":
+                    return tipo_r(instrucao, sep);
+                    break;
+                case "nor":
+                    return tipo_r(instrucao, sep);
+                    break;
+                case "div":
+                    return tipo_r(instrucao, sep);
+                    break;
                 //Tipo I***************************
                 case "addi":
                     return tipo_i(instrucao, sep);
@@ -223,15 +235,15 @@ namespace MIPS_Assembler
                     Status = "Conversão efetuada com sucesso";
                     break;
                 case "beq":
-                    cod_maq = "000100" + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
+                    cod_maq = "000100" + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
                     Status = "Conversão efetuada com sucesso";
                     break;
                 case "bne":
-                    cod_maq = "000101" + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
+                    cod_maq = "000101" + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
                     Status = "Conversão efetuada com sucesso";
                     break;
                 case "xori":
-                    cod_maq = "001110" + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
+                    cod_maq = "001110" + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
                     Status = "Conversão efetuada com sucesso";
                     break;
                 default:
