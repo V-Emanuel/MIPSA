@@ -131,7 +131,10 @@ namespace MIPS_Assembler
                     break;
                 case "xori":
                     return tipo_i(instrucao, sep);
-                    break;             
+                    break; 
+                case "addiu":
+                    return tipo_i(instrucao, sep);
+                    break;
                     
                 //Tipo "MEM"***********************
                 case "lw":
@@ -250,7 +253,7 @@ namespace MIPS_Assembler
                     cod_maq = "001110" + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
                     Status = "Conversão efetuada com sucesso";
                     break;
-                 case "xori":
+                 case "addiu":
                     cod_maq = "001001" + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
                     Status = "Conversão efetuada com sucesso";
                     break;
