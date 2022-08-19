@@ -101,13 +101,13 @@ namespace MIPS_Assembler
                 case "xor":
                     return tipo_r(instrucao, sep);
                     break;
-                case "xor":
-                    return tipo_r(instrucao, sep);
-                    break;
                 case "nor":
                     return tipo_r(instrucao, sep);
                     break;
                 case "div":
+                    return tipo_r(instrucao, sep);
+                    break;
+                case "addu":
                     return tipo_r(instrucao, sep);
                     break;
                 //Tipo I***************************
@@ -196,6 +196,10 @@ namespace MIPS_Assembler
                     FUNCT = "011010";
                     Status = "Conversão efetuada com sucesso";
                     break;
+                case "addu":
+                    FUNCT = "100001";
+                    Status = "Conversão efetuada com sucesso";
+                    break;
                 default:
                     Status = "Instrução não suportada";
                     flag_error = true;
@@ -244,6 +248,10 @@ namespace MIPS_Assembler
                     break;
                 case "xori":
                     cod_maq = "001110" + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
+                    Status = "Conversão efetuada com sucesso";
+                    break;
+                 case "xori":
+                    cod_maq = "001001" + sep + hex2binary(Y).PadLeft(5, '0') + sep + hex2binary(X).PadLeft(5, '0') + sep + hex2binary(i).PadLeft(16, '0');
                     Status = "Conversão efetuada com sucesso";
                     break;
                 default:
@@ -320,6 +328,7 @@ namespace MIPS_Assembler
         {
             MessageBox.Show("Instruções suportadas:\n\n" +
                 "ADD $X, $Y, $Z" + "\n" +
+                "ADDU $X, $Y, $Z" + "\n" +
                 "SUB $X, $Y, $Z" + "\n" +
                 "AND $X, $Y, $Z" + "\n" +
                 "OR $X, $Y, $Z" + "\n" +
@@ -331,6 +340,7 @@ namespace MIPS_Assembler
                 "SW $X, i($Y)" + "\n" +
                 "BEQ $X, $Y, i" + "\n" +
                 "ADDi $X, $Y, i" + "\n" +
+                "ADDiU $X, $Y, i" + "\n" +
                 "ANDi $X, $Y, i" + "\n" +
                 "ORi $X, $Y, i" + "\n" +
                 "SLTi $X, $Y, i" + "\n" +
