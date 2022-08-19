@@ -62,8 +62,8 @@
             this.richTextBox_MIPS.Name = "richTextBox_MIPS";
             this.richTextBox_MIPS.Size = new System.Drawing.Size(117, 595);
             this.richTextBox_MIPS.TabIndex = 0;
-            this.richTextBox_MIPS.Text = "ADD $1, $2, $3\nSUB $1, $2, $3\nAND $1, $2, $3\nOR $1, $2, $3\nSLT $1, $2, $3\nLW $1, " +
-    "5($2) \nSW $1, 5($2)\nBEQ $1, $2, 5\nADDi $1, $2, 5\nANDi $1, $2, 5\nORi $1, $2, 5\nSL" +
+            this.richTextBox_MIPS.Text = "ADD $1, $2, $3\nADDU $1, $2, $3\nSUB $1, $2, $3\nDIV $1, $2, $3\nAND $1, $2, $3\nOR $1, $2, $3\nNOR $1, $2, $3\nXOR $1, $2, $3\nSLT $1, $2, $3\nLW $1, " +
+    "5($2) \nSW $1, 5($2)\nBEQ $1, $2, 5\nBNE $1, $2, 5\nADDi $1, $2, 5\nADDiU $1, $2, 5\nXORi $1, $2, 5\nANDi $1, $2, 5\nORi $1, $2, 5\nSL" +
     "Ti $1, $2, 5\nJ 5";
             // 
             // richTextBox_cod_maq
