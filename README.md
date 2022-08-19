@@ -7,6 +7,7 @@ Esse aplicativo foi desenvolvido para auxiliar as atividades da disciplina Lab. 
 
 As seguintes instruções são suportadas:
  * ADD $X, $Y, $Z
+ * ADDU $X, $Y, $Z
  * SUB $X, $Y, $Z
  * AND $X, $Y, $Z
  * OR $X, $Y, $Z
@@ -18,6 +19,7 @@ As seguintes instruções são suportadas:
  * BEQ $X, $Y, i
  * BNE $X, $Y, i
  * ADDi $X, $Y, i
+ * ADDiU $X, $Y, i
  * ANDi $X, $Y, i
  * ORi $X, $Y, i
  * XORi $X, $Y, i
