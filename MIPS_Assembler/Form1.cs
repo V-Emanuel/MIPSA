@@ -324,7 +324,7 @@ namespace MIPS_Assembler
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("UFCG - UAEE\nLab. de Arquitetura de Sistemas Digitais - Prof. Rafael Lima\nMIPS Assembler V1.3");
+            MessageBox.Show("UFCG - UAEE\nLab. de Arquitetura de Sistemas Digitais - Prof. Rafael Lima\nVersão com uma pequena contribuição do Aluno Victor Emanuel :D\nMIPS Assembler V1.3");
         }
 
         private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
