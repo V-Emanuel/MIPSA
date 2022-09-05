@@ -5,7 +5,7 @@ Esse aplicativo foi desenvolvido para auxiliar as atividades da disciplina Lab. 
 
 É um software assemblador que gera código de máquina para o processador MIPS desenvolvido por cada um dos alunos. Esses processadores têm 8 registradores de 8bits, 1kbyte de memória de instruções, 256bytes de memória de dados e uma ULA com 5 operações. Mais detalhes na seguinte playlist: https://youtube.com/playlist?list=PLKM6TRQ8YHKdxnB_G8raC3J1onhAeWJoA
 
-O software assemblador se trata o arquivo "MIPS_Assembler.exe". Basta baixá-lo e começar a usar :D.
+  Para gerar o software assemblador execultável, basta baixar o projeto e compilar.
 
 As seguintes instruções são suportadas:
  * ADD $X, $Y, $Z
